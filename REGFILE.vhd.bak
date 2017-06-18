@@ -1,0 +1,28 @@
+--includeLibraries
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+use IEEE.numeric_std.ALL;
+
+entity REGFILE is       -- entity declares the design name and i/o pins associated with it.
+port  
+(
+	clk : in std_logic;  
+	ASEL : in unsigned(2 downto 0);  --Bus Selection (Input)
+   BSEL : in unsigned(2 downto 0);  --Bus Selection (Input)
+   DSEL : in unsigned(2 downto 0);	--Destination Select (Input)
+   DIN : in unsigned(7 downto 0);   --Input Data (Input)
+	RIN : in unsigned(7 downto 0);   --Destination Register data In (Input)
+	A : out unsigned(7 downto 0);    --BUS Outputs
+	B : out unsigned(7 downto 0);    --BUS Outputs
+);
+end REGFILE;
+
+architecture Lab2 of REGFILE is--architecture is the description of  inner design operation of the entity
+
+begin  
+	process(clk)  -- executable functionality of a component is defined in this block
+	begin  
+	if rising_edge(clk) then
+		
+	end if;
+	
